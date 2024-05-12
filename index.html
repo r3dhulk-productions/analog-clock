@@ -3,739 +3,764 @@
 
 <head>
     <title>Analog Clock</title>
-
+    <link rel="shortcut icon" href="clock.png" type="image/x-icon">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #091921;
-        }
-
-        .clock {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background-image: url("clock.png");
-            background-size: cover;
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
-                inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
-                inset 0 15px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .clock::before {
-            content: "";
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            background-color: #fff;
-            border-radius: 50%;
-            z-index: 1000;
-        }
-
-        .hour,
-        .min,
-        .sec {
-            position: absolute;
-        }
-
-        .hr {
-            width: 160px;
-            height: 160px;
-        }
-
-        .mn {
-            width: 190px;
-            height: 190px;
-        }
-
-        .sc {
-            width: 230px;
-            height: 230px;
-        }
-
-        .hr,
-        .mn,
-        .sc {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hr::before {
-            content: "";
-            width: 8px;
-            height: 80px;
-            background-color: #ff105e;
-            z-index: 100;
-            border-radius: 5px;
-        }
-
-        .mn::before {
-            content: "";
-            width: 6px;
-            height: 90px;
-            background-color: rgb(15, 105, 207);
-            z-index: 11;
-            border-radius: 5px;
-        }
-
-        .sc::before {
-            content: "";
-            width: 2px;
-            height: 140px;
-            background-color: #fff;
-            z-index: 10;
-            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
-    <script type='text/javascript' src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
+    <script type='text/javascript'
+        src='//pl23300006.highcpmgate.com/eb/e3/db/ebe3db9344a7717d34e00aa04e61adde.js'></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
-            'key' : 'a74873763a7f7d967e0f2666d61911e8',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': 'a74873763a7f7d967e0f2666d61911e8',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
         };
     </script>
-    <script type="text/javascript" src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
+    <script type="text/javascript"
+        src="//www.topcreativeformat.com/a74873763a7f7d967e0f2666d61911e8/invoke.js"></script>
     <script type="text/javascript">
         atOptions = {
             'key': '01da0fdc5dfbd49bbb469eb062735bad',
@@ -802,24 +827,6 @@
             <div class="sc" id="sc"></div>
         </div>
     </div>
-    <script>
-        const deg = 6; //360deg / 60(min||sec) => 6
-        const hr = document.querySelector("#hr");
-        const mn = document.querySelector("#mn");
-        const sc = document.querySelector("#sc");
-
-        setInterval(() => {
-            let day = new Date();
-            let hh = day.getHours() * 30; //360deg / 12 hour => 30
-            let mm = day.getMinutes() * deg;
-            let ss = day.getSeconds() * deg;
-
-            hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-            mn.style.transform = `rotateZ(${mm}deg)`;
-            sc.style.transform = `rotateZ(${ss}deg)`;
-        });
-
-    </script>
 
 </body>
 
